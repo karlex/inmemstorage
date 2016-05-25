@@ -1,0 +1,20 @@
+﻿<Window x:Class="InMemStorage.WpfClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="59*"/>
+			<ColumnDefinition Width="458*"/>
+		</Grid.ColumnDefinitions>
+		<ListBox x:Name="KeysListBox" HorizontalAlignment="Left" Width="100" Margin="10,26,0,10" SelectionChanged="KeysListBox_SelectionChanged" Grid.ColumnSpan="2"/>
+		<Label Content="Keys:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+		<Button x:Name="SetButton" Content="Set Value" HorizontalAlignment="Left" Margin="62.735,121,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="SetButton_Click" Grid.Column="1"/>
+		<Label Content="Value:" HorizontalAlignment="Left" Margin="62.735,53,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+		<TextBox x:Name="ValueTextBox" HorizontalAlignment="Left" Height="23" Margin="62.735,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+		<Label Content="Key:" HorizontalAlignment="Left" Margin="62.735,0,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+		<TextBox x:Name="KeyTextBox" HorizontalAlignment="Left" Height="23" Margin="62.735,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+		<Button x:Name="DeleteButton" Content="Delete" HorizontalAlignment="Left" Margin="62.735,160,0,0" VerticalAlignment="Top" Width="120" Height="23" Click="DeleteButton_Click" Grid.Column="1"/>
+
+	</Grid>
+</Window>

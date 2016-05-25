@@ -1,0 +1,23 @@
+﻿@model IEnumerable<string>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h1>Storage</h1>
+
+<p>
+	@Html.ActionLink("Set New Value", "GetEdit", new { }, new { @class = "btn btn-success btn-sm" })
+</p>
+
+<ul>
+	@foreach (var key in Model)
+	{
+		<li>
+			<strong>@key</strong>
+			<small>
+				(<a href="@Url.Action("GetEdit", new { @key = key })">Edit</a>,
+				<a href="@Url.Action("Remove", new { @key = key })">Remove</a>)
+			</small>
+		</li>
+	}
+</ul>
